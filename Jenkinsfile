@@ -15,7 +15,7 @@ node {
     }
     stage('build'){
         sh "source ~/.profile"
-        sh "mvn -v"
+        sh "/usr/local/apache-maven/bin/mvn -v"
     }
 
 }
