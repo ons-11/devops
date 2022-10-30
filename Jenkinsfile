@@ -13,6 +13,8 @@ node {
         }
     }
     stage('build'){
+        dir(devops){
         sh "/usr/local/apache-maven/bin/mvn clean package"
+        }
     }
 }
