@@ -2,7 +2,7 @@ String branchName = "taha-dev"
 String gitCredentials = "GITHUB"
 String repoUrl ="https://github.com/ons-11/devops"
 String dockerCredentials = "DOCKER"
-String dockerRepoUrl = "https://hub.docker.com/"
+String dockerRepoUrl = ""
 String dockerImageName = "tahahamraoui/springboot-app"
 String dockerImageTag = "${dockerImageName}:${env.BUILD_NUMBER}"
 node {
