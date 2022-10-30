@@ -14,7 +14,8 @@ node {
         }
     }
 
-    stage('maven version'){
-        sh 'export M2_HOME=/usr/local/apache-maven'
+    stage('Build - Maven package'){
+        sh 'mvn package'
     }
+    
 }
