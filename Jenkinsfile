@@ -14,8 +14,12 @@ node {
         }
     }
 
+    stage('Maven Env-variable'){
+        sh 'export M2_HOME=/usr/local/apache-maven && export M2=$M2_HOME/bin  && export PATH=$M2:$PATH'
+    }
+
     stage('Build - Maven package'){
         sh 'mvn package'
     }
-    
+
 }
