@@ -15,6 +15,7 @@ import tn.esprit.rh.achat.services.IStockService;
 @SpringBootTest
 
 public class StockTest {
+/*
 	@Autowired
 	private IStockService stockservice;
 	
@@ -25,5 +26,5 @@ public class StockTest {
 		assertEquals(s.getLibelleStock(), savedStock.getLibelleStock());
 		}
 	
-
+*/
 }

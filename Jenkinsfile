@@ -9,6 +9,7 @@ node {
     stage('Git - Clone'){
         echo 'Cloning files from (branch: "' + branchName +'" )'
         dir('build') {
+            sh 'rm -rf ./*'
             git branch : branchName, credentialsId: gitCredentials, url: repoUrl 
         }
     }
