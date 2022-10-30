@@ -3,7 +3,6 @@ String gitCredentials = "GITHUB"
 String repoUrl ="https://github.com/ons-11/devops"
 
 node {
-
     echo 'Make build directory'
     sh 'mkdir -p build'
 
@@ -14,8 +13,6 @@ node {
         }
     }
     stage('build'){
-        sh "source ~/.profile"
-        sh "/usr/local/apache-maven/bin/mvn -v"
+        sh "/usr/local/apache-maven/bin/mvn clean package"
     }
-
 }
