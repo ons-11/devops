@@ -6,14 +6,14 @@ node {
     echo 'Make build directory'
     sh 'mkdir -p build'
 
-    stage('Clone'){
+    stage('Git - Clone'){
         echo 'Cloning files from (branch: "' + branchName +'" )'
         dir('build') {
             git branch : branchName, credentialsId: gitCredentials, url: repoUrl 
         }
     }
-    stage('build'){
-        dir('devops'){
+    stage('Maven - Build'){
+        dir('build'){
         sh "/usr/local/apache-maven/bin/mvn clean package"
         }
     }
