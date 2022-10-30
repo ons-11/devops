@@ -1,8 +1,8 @@
 String branchName = "taha-dev"
 String gitCredentials = "GITHUB"
 String repoUrl ="https://github.com/ons-11/devops"
-String dockerCredentials = ""
-String dockerRepoUrl = ""
+String dockerCredentials = "DOCKER"
+String dockerRepoUrl = "https://hub.docker.com/"
 String dockerImageName = "tahahamraoui/springboot-app"
 String dockerImageTag = "${dockerImageName}:${env.BUILD_NUMBER}"
 node {
@@ -23,16 +23,16 @@ node {
         }
     }
 
-    stage('Docker - Build image'){
+    def dockerImage = stage('Docker - Build image'){
         dir('build'){
         docker.build(dockerImageTag , '.')
         }
     }
-/*
+
      stage('Docker - Push image') {
-        withDockerRegistry([ credentialsId: "DOCKER", url: "" ]) {
+        withDockerRegistry([ credentialsId: dockerCredentials , url: dockerRepoUrl ]) {
         dockerImage.push()
         }
     }
-    */
+    
 }
