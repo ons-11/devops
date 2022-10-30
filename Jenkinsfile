@@ -1,4 +1,4 @@
-String branchName = env.BRANCH_NAME
+String branchName = "taha-dev"
 String gitCredentials = "GITHUB"
 String repoUrl ="https://github.com/ons-11/devops"
 
