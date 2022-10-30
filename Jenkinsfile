@@ -1,9 +1,10 @@
 String branchName = "taha-dev"
 String gitCredentials = "GITHUB"
 String repoUrl ="https://github.com/ons-11/devops"
-String dockerRepoUrl = "localhost:8083"
-String dockerImageName = "devops"
-String dockerImageTag = "${dockerRepoUrl}/${dockerImageName}:${env.BUILD_NUMBER}"
+String dockerCredentials = ""
+String dockerRepoUrl = ""
+String dockerImageName = "tahahamraoui/springboot-app"
+String dockerImageTag = "${dockerImageName}:${env.BUILD_NUMBER}"
 node {
     echo 'Make build directory'
     sh 'mkdir -p build'
@@ -22,9 +23,16 @@ node {
         }
     }
 
-    def image = stage('Docker - Build image'){
+    stage('Docker - Build image'){
         dir('build'){
         docker.build(dockerImageTag , '.')
         }
     }
+/*
+     stage('Docker - Push image') {
+        withDockerRegistry([ credentialsId: "DOCKER", url: "" ]) {
+        dockerImage.push()
+        }
+    }
+    */
 }
