@@ -23,7 +23,8 @@ node {
     }
 
     def image = stage('Docker - Build image'){
+        dir('build'){
         docker.build(dockerImageTag , '.')
+        }
     }
-
 }
