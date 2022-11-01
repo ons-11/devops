@@ -23,6 +23,13 @@ node {
         }
     }
 
+    stage('Maven - Deploy'){
+        dir('build'){
+            sh "/usr/local/apache-maven/bin/mvn deploy"
+        }
+    }
+
+/*
     def dockerImage = stage('Docker - Build image'){
         dir('build'){
         docker.build(dockerImageTag , '.')
@@ -34,5 +41,5 @@ node {
         dockerImage.push()
         }
     }
-    
+*/    
 }
