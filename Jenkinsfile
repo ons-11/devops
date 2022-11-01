@@ -29,7 +29,6 @@ node {
         }
     }
 
-/*
     def dockerImage = stage('Docker - Build image'){
         dir('build'){
         docker.build(dockerImageTag , '.')
@@ -40,6 +39,5 @@ node {
         withDockerRegistry([ credentialsId: dockerCredentials , url: dockerRepoUrl ]) {
         dockerImage.push()
         }
-    }
-*/    
+    }   
 }
