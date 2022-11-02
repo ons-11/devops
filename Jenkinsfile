@@ -5,8 +5,9 @@ String dockerCredentials = "DOCKER"
 String dockerRepoUrl = ""
 String dockerImageName = "tahahamraoui/springboot-app"
 String dockerImageTag = "${dockerImageName}:${env.BUILD_NUMBER}"
+
 node {
-    echo 'Make build directory'
+    echo 'Create build directory'
     sh 'mkdir -p build'
 
     stage('Git - Clone'){
