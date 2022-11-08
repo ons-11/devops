@@ -5,6 +5,7 @@ pipeline {
      maven 'M2_HOME'    
   }
   
+
   stages {
        
     stage ('Artifact construction') {
