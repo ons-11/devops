@@ -24,6 +24,15 @@ node {
         }
     }
 
+          stage ('Maven Test Sonar') { 
+            dir('build') {
+                sh 'mvn sonar:sonar -Dsonar.host.url=http://172.20.10.6:9000 -Dsonar.login=44455bf5678a0df3152e7b996af0b462ccff19c0'
+            }
+
+        }
+
+
+        
     stage('Maven - Deploy'){
         dir('build'){
             sh "/usr/local/apache-maven/bin/mvn deploy"
@@ -36,9 +45,9 @@ node {
         }
     }
 
-     stage('Docker - Push image') {
-        withDockerRegistry([ credentialsId: dockerCredentials , url: dockerRepoUrl ]) {
-        dockerImage.push()
-        }
-    }   
+    // stage('Docker - Push image') {
+      //  withDockerRegistry([ credentialsId: dockerCredentials , url: dockerRepoUrl ]) {
+        //dockerImage.push()
+       // }
+    //}   
 }
