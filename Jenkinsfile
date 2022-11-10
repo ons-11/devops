@@ -45,9 +45,9 @@ node {
         }
     }
 
-    // stage('Docker - Push image') {
-      //  withDockerRegistry([ credentialsId: dockerCredentials , url: dockerRepoUrl ]) {
-        //dockerImage.push()
-       // }
-    //}   
+     stage('Docker - Push image') {
+       withDockerRegistry([ credentialsId: dockerCredentials , url: dockerRepoUrl ]) {
+        dockerImage.push()
+        }
+    }   
 }
