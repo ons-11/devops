@@ -32,12 +32,7 @@ public class StockRestController {
 	}
 
 
-	@PostMapping("/add-stock")
-	@ResponseBody
-	public Stock addStock(@RequestBody Stock s) {
-		
-		return stockService.addStock(s);
-	}
+
 
 
 	@DeleteMapping("/remove-stock/{stock-id}")
