@@ -2,6 +2,7 @@ package tn.esprit.rh.achat;
 
 
 
+import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -25,5 +26,22 @@ public class StockTest {
 		assertEquals(s.getLibelleStock(), savedStock.getLibelleStock());
 		}
 	
-
+	@Test
+	public void testDeleteStock() {
+		stockservice.deleteStock(11L);
+	assertNull(stockservice.retrieveStock(11L));
+	}
+	
+	@Test
+	public void testRetrieveAllStocks() {
+	java.util.List<Stock> allStocks = stockservice.retrieveAllStocks();
+	assertEquals(8, allStocks.size());
+	}
+	
+	@Test
+	public void testRetrieveStock() {
+	Stock stock = stockservice.retrieveStock(2L);
+	assertEquals(2L, stock.getIdStock());
+	}
+	
 }
