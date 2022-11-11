@@ -2,7 +2,7 @@ package tn.esprit.rh.achat;
 
 
 
-import static org.junit.Assert.assertNull;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -29,7 +29,7 @@ import tn.esprit.rh.achat.services.IStockService;
 void testDeleteStock() {
 		stockservice.deleteStock(11L);
 	assertNull(stockservice.retrieveStock(11L));
-	}*/
+	*/
 	
 	@Test
 	 void testRetrieveAllStocks() {
