@@ -1,3 +1,3 @@
 FROM openjdk:11
-COPY target/devops-1.0.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+COPY target/achat.jar achat.jar
+ENTRYPOINT ["java", "-jar", "/achat.jar"]
