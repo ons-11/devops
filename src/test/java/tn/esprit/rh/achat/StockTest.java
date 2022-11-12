@@ -15,7 +15,7 @@ import tn.esprit.rh.achat.services.IStockService;
 
 @SpringBootTest
  class StockTest {
-	@Autowired
+@Autowired
 	private IStockService stockservice;
 	
 	@Test
@@ -31,11 +31,11 @@ void testDeleteStock() {
 	assertNull(stockservice.retrieveStock(11L));
 	*/
 	
-	@Test
+/*@Test
 	 void testRetrieveAllStocks() {
 	java.util.List<Stock> allStocks = stockservice.retrieveAllStocks();
 	assertEquals(8, allStocks.size());
-	}
+	}*/
 	
 	@Test
 	void testRetrieveStock() {
