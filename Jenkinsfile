@@ -26,7 +26,7 @@ node {
 
         stage('MVN SONAREQUBE') {
             dir('build') {
-                sh'/usr/local/apache-maven/bin/mvn mvn sonar:sonar -Dsonar.login=e699e8d1677eac9fa74a99bb88e8c22c5972aaef'
+                sh'/usr/local/apache-maven/bin/mvn sonar:sonar -Dsonar.login=e699e8d1677eac9fa74a99bb88e8c22c5972aaef'
                 }
            
         }
