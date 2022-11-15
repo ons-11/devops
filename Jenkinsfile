@@ -17,7 +17,7 @@ node {
             git branch : branchName, credentialsId: gitCredentials, url: repoUrl 
         }
     }
-
+/*
     stage('Maven - Build'){
         dir('build'){
         sh "/usr/local/apache-maven/bin/mvn clean package"
@@ -38,6 +38,7 @@ node {
             sh "/usr/local/apache-maven/bin/mvn deploy"
         }
     }
+    */
 
     def dockerImage = stage('Docker - Build image'){
         dir('build'){
