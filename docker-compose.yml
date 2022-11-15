@@ -15,7 +15,7 @@ services:
   app:
     depends_on:
       - mysqldb
-    image: tahahamraoui/springboot-app
+    image: tahahamraoui/achat-1.0
     restart: on-failure
     ports:
       - 8089:8089

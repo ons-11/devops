@@ -3,7 +3,7 @@ String gitCredentials = "GITHUB"
 String repoUrl ="https://github.com/ons-11/devops"
 String dockerCredentials = "DOCKER"
 String dockerRepoUrl = ""
-String dockerImageName = "tahahamraoui/springboot-app"
+String dockerImageName = "tahahamraoui/achat-1.0"
 String dockerImageTag = "${dockerImageName}:${env.BUILD_NUMBER}"
 
 node {
