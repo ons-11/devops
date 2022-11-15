@@ -53,7 +53,7 @@ node {
 
     stage('Docker compose') {
                   dir('build') {
-                       sh 'docker-compose up -d '
+                       sh "/usr/local/bin/docker-compose up -d "
                          }  }
 
 }
