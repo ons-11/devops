@@ -50,4 +50,10 @@ node {
         dockerImage.push()
         }
     }   
+
+    stage('Docker compose') {
+                  dir('build') {
+                       sh 'docker-compose up -d '
+                         }  }
+
 }
