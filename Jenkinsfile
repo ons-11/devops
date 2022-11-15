@@ -31,6 +31,7 @@ node {
            
         }
 
+*/
 
         
     stage('Maven - Deploy'){
@@ -38,7 +39,6 @@ node {
             sh "/usr/local/apache-maven/bin/mvn deploy"
         }
     }
-    */
 
     def dockerImage = stage('Docker - Build image'){
         dir('build'){
