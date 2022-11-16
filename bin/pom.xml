@@ -92,9 +92,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-</plugins>
-
-<finalName>achat</finalName>
+		</plugins>
 	</build>
 
 </project>

@@ -2,6 +2,7 @@ package tn.esprit.rh.achat;
 
 
 
+import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -14,16 +15,33 @@ import tn.esprit.rh.achat.services.IStockService;
 
 @SpringBootTest
 
-public class StockTest {
+class StockTest {
 	@Autowired
 	private IStockService stockservice;
 	
 	@Test
-	public void testAddStock() {
+	 void testAddStock() {
 		Stock s = new Stock("stock test",100,10);
 		Stock savedStock= stockservice.addStock(s);
 		assertEquals(s.getLibelleStock(), savedStock.getLibelleStock());
 		}
 	
-
+	@Test
+	void testRetrieveStock() {
+	Stock stock = stockservice.retrieveStock(2L);
+	assertEquals(2L, stock.getIdStock());
+	}
+	
+/*	@Test
+	 void testRetrieveAllStocks() {
+	java.util.List<Stock> allStocks = stockservice.retrieveAllStocks();
+	assertEquals(8, allStocks.size());
+	}*/
+	
+	/*@Test
+void testDeleteStock() {
+		stockservice.deleteStock(11L);
+	assertNull(stockservice.retrieveStock(11L));
+	}*/
+	
 }
