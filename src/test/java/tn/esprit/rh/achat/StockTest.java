@@ -1,4 +1,4 @@
-package tn.esprit.rh.achat;
+/*package tn.esprit.rh.achat;
 
 
 
@@ -27,3 +27,4 @@ public class StockTest {
 	
 
 }
+*/
