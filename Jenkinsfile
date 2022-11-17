@@ -32,7 +32,7 @@ pipeline {
 	  stage('Docker build image') {
       steps {
          sh 'echo "Docker build image is processing ...."'
-        sh 'docker build -t sirinerbesprit/achat .'
+        sh 'docker build -t sirinerbesprit/achat:1.0 .'
 
       }
     }
@@ -46,8 +46,13 @@ pipeline {
     stage('Docker push') {
       steps {
          sh 'echo "Docker push is processing ...."'
-        sh 'docker push sirinerbesprit/achat:latest'
+        sh 'docker push sirinerbesprit/achat:1.0'
 
+      }
+    }
+    stage('Running Back') {
+      		steps {
+         		sh 'docker-compose up -d'
       }
     }
   }
