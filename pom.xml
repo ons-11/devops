@@ -121,8 +121,8 @@
         </build>
 	<distributionManagement>
 		<repository>
-			<id>siwar</id>
-			<url>http://192.168.0.10:8081/repository/maven-releases/</url>
+			<id>admin</id>
+			<url>localhost:8081/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
 
