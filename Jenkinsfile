@@ -32,7 +32,7 @@ pipeline {
 	  stage('Docker build image') {
       steps {
          sh 'echo "Docker build image is processing ...."'
-        sh 'docker build -t sirinerbesprit/achat:1.0 .'
+        sh 'docker build -t sirinerbesprit/achat:1.1 .'
 
       }
     }
@@ -46,7 +46,7 @@ pipeline {
     stage('Docker push') {
       steps {
          sh 'echo "Docker push is processing ...."'
-        sh 'docker push sirinerbesprit/achat:1.0'
+        sh 'docker push sirinerbesprit/achat:1.1'
 
       }
     }
