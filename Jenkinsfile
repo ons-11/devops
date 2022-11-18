@@ -56,4 +56,14 @@ pipeline {
       }
     }
   }
+	  post {
+    success { mail to: "sirine.rbei@esprit.tn",
+                    subject: "Build sucess",
+                    body: "sucess"
+             echo 'successful'}
+    failure { mail to: "sirine.rbei@esprit.tn",
+                    subject: "Build failed",
+                    body: "failed"
+             echo 'failed'}
+  }
 }
