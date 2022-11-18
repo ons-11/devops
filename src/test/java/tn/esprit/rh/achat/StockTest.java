@@ -19,7 +19,7 @@ class StockTest {
 	@Autowired
 	private IStockService stockservice;
 	
-	@Test
+/*	@Test
 	 void testAddStock() {
 		Stock s = new Stock("stock test",100,10);
 		Stock savedStock= stockservice.addStock(s);
@@ -30,7 +30,7 @@ class StockTest {
 	void testRetrieveStock() {
 	Stock stock = stockservice.retrieveStock(2L);
 	assertEquals(2L, stock.getIdStock());
-	}
+	}*/
 	
 /*	@Test
 	 void testRetrieveAllStocks() {
